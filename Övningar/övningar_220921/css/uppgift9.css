@@ -1,0 +1,39 @@
+.container {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.container2 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+
+  border: 1px solid red;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.container2 span{
+  background-color: gray;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.picture {
+  width: 500px;
+  border: 1px green solid;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+img {
+  width: 300px;
+  margin: 20px auto;
+}
+

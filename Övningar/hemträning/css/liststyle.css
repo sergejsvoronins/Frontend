@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.title{
+    border-bottom: 4px solid black;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.div{
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+}
+.div span{
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+}
+
+.div::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    left: 98px;
+    height: 100%;
+    background-color: black;
+}
+.div::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 50px;
+    border: 4px solid black;
+    background-color: white;
+    border-radius: 50%;
+}

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@keyframes border-style {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(4, 4, 4);
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.border::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(245, 74, 74);
+    width: 25%;
+    height: 150%;
+
+    animation: border-style 2s linear infinite;
+}
+
+
+.content{
+    z-index: 100;
+    background-color: white;
+    height: 95%;
+    width: 95%;
+
+}

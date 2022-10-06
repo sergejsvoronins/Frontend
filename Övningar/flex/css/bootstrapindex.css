@@ -1,0 +1,50 @@
+.content-img img{
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes vapen{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    50%{
+        top: 100%;
+        left: 100%;
+        transform: translate(-100%,-100%);
+    }
+    75%{
+        top: 100%;
+        left: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+header{
+    background-color: #1B1717;
+}
+
+header span{
+    z-index: 1;
+}
+.stadsvapen{
+    animation: vapen 20s linear infinite;    
+}
+.stadsvapen img{
+    width: 50px;
+    z-index: 0;
+}
+nav{
+    background-color: #810000;
+}
+section{
+    background-color: #CE1212;
+}

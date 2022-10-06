@@ -99,7 +99,7 @@ nav ul li a{
 .noactive-page{
     display: flex;
     color: white;
-    gap: 10px;s
+    gap: 10px;
 
 }
 .noactive-page i{
@@ -139,8 +139,6 @@ nav ul li a{
     nav{
         width: 30%;
         font-size: x-large;
-    }
-    nav ul li{
     }
     .content{
         width: 70%;

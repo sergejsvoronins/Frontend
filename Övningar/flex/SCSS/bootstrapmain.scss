@@ -1,4 +1,3 @@
-
 @keyframes vapen{
     0%{
         top: 0;
@@ -24,25 +23,29 @@
         left: 0;
     }
 }
+
 header{
     background-color: #810000;
 
+    span{
+        z-index: 1;
+    }
+    .stadsvapen{
+        animation: vapen 20s linear infinite;
+
+        img{
+            width: 50px;
+            z-index: 0;
+        }
+    }
+
 }
 
-header span{
-    z-index: 1;
-}
-.stadsvapen{
-    animation: vapen 20s linear infinite;
-}
-.stadsvapen img{
-    width: 50px;
-    z-index: 0;
-}
-
-section{
-    background-color: #CE1212;
-}
-.no-actual{
-    visibility: hidden;
+main{
+    section{
+        background-color: #CE1212;
+        .no-actual{
+            visibility: hidden;
+        }
+    }
 }

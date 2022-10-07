@@ -1,11 +1,9 @@
-
-.content{
+.content {
   width: 450px;
   height: 200px;
   background-color: yellow;
 }
-
-.content article{
+.content .content article {
   width: 50px;
   height: 50px;
   background-color: turquoise;
@@ -14,5 +12,6 @@
   margin: 0 auto;
   transform: translateY(-50%);
   border-radius: 50%;
-
 }
+
+/*# sourceMappingURL=formsmain.css.map */

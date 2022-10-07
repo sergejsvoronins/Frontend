@@ -1,0 +1,152 @@
+body {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  font-family: cursive;
+}
+body header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #810000;
+  color: white;
+  height: 100px;
+}
+body header .header-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  display: flex;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+body header .header-title .header-title span {
+  z-index: 1;
+}
+@keyframes vapen {
+  0% {
+    top: 0;
+  }
+  25% {
+    transform: translateX(-100%);
+    left: 100%;
+    top: 0;
+  }
+  50% {
+    transform: translateX(-100%);
+    left: 100%;
+    transform: translate(-100%, -100%);
+    top: 100%;
+  }
+  75% {
+    top: 100%;
+    transform: translateY(-100%);
+    left: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+body header .header-title .header-image {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: vapen 10s linear infinite;
+}
+body header .header-title .header-image img {
+  width: 100px;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main nav {
+  display: flex;
+  justify-content: center;
+}
+body main nav ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+body main nav ul li {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+body main nav ul li a {
+  text-decoration: none;
+}
+body main nav ul .active-page a {
+  border-bottom: 2px solid white;
+}
+body main nav ul .noactive-page i {
+  visibility: hidden;
+}
+body main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #CE1212;
+  padding: 20px 0;
+  gap: 10px;
+}
+body main .content article {
+  width: 90%;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+body main .content article img {
+  width: 100%;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  body header {
+    height: 25%;
+    font-size: 2.5em;
+  }
+  body main {
+    flex-direction: row;
+  }
+  body main nav {
+    width: 30%;
+    font-size: x-large;
+  }
+  body main nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  body main nav ul li * {
+    margin-right: 5px;
+  }
+  body .content {
+    width: 70%;
+  }
+  body .content article {
+    display: flex;
+    width: 95%;
+    font-size: 1.2em;
+  }
+  body .content article .content-img {
+    width: 50%;
+  }
+  body .content article .content-title {
+    width: 50%;
+  }
+  body .content img {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

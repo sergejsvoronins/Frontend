@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  position: relative;
+}
+@keyframes heartbeat {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  25% {
+    transform: rotate(-45deg) scale(2);
+  }
+  50% {
+    transform: rotate(-45deg) scale(3);
+  }
+  75% {
+    transform: rotate(-45deg) scale(2);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+body .heart {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  animation: heartbeat 1s linear infinite;
+}
+body .heart::before, body .heart::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+body .heart::before {
+  bottom: 50%;
+}
+body .heart::after {
+  left: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */

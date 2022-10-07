@@ -1,13 +1,14 @@
-body{
+body {
   margin: 0;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-div {
+body div {
   height: 300px;
   width: 10px;
   border: 1px solid blue;
 }
+
+/*# sourceMappingURL=divmain.css.map */

@@ -36,7 +36,7 @@
     }
         
     &:checked  + .hamburger__icon + .menu{
-        top: 0;
+        top: 50px;
         transform: scale(1);
     }
 }

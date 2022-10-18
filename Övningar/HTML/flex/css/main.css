@@ -65,7 +65,7 @@ body header .header-title .header-image img {
 }
 body main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 body main nav {
   display: flex;
@@ -73,6 +73,7 @@ body main nav {
 }
 body main nav ul {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 0;
 }
@@ -120,12 +121,12 @@ body main .content article img {
     flex-direction: row;
   }
   body main nav {
-    width: 30%;
+    width: 100%;
     font-size: x-large;
   }
   body main nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   body main nav ul li * {
     margin-right: 5px;

@@ -71,7 +71,7 @@ body{
 
     main{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
         nav{
             display: flex;
@@ -79,6 +79,7 @@ body{
 
             ul{
                 display: flex;
+                flex-direction: column;
                 gap: 20px;
                 padding: 0;
 
@@ -136,11 +137,11 @@ body{
         main{
             flex-direction: row;
                nav{
-                    width: 30%;
+                    width: 100%;
                     font-size: x-large;
                     ul {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
 
                         li *{
                             margin-right: 5px;

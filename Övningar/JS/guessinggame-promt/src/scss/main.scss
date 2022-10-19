@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    & .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        background-color: green;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+
+        & .container-btn{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            & .btn{
+                width: 50%;
+                height: 60%;
+                border-radius: 10px;
+                border: none;
+                font-size: 30px;
+                font-weight: 700;
+                color: purple;
+                background-color: orange;
+                &:hover{
+                    background-color: red;
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+                }
+            }
+            & .restartBtn{
+                position: absolute;
+                bottom: 20px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                background-color: blue;
+                color: aqua;
+                font-size: 20px;
+                font-weight: 700;
+                &:hover{
+                    background-color: purple;
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+                }
+            }
+        }
+        & .container-pTag{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & p{
+                font-size: 20px;
+                color: yellow;
+                font-weight: 700;
+            }
+        }
+        
+    }
+}

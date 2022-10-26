@@ -30,11 +30,11 @@ const outputEl = document.getElementById("output");
 
 
 numBtnEl.addEventListener("click", function(){
-    let numOne = Number(inputOneEl.value);
-    let numTwo = Number(inputTwoEl.value);
+    let numOne = parseInt(inputOneEl.value);
+    let numTwo = parseInt(inputTwoEl.value);
     let sum = numOne+numTwo;
-    let sumText = String(sum);
-    outputEl.innerHTML=sumText;
+    
+    outputEl.innerHTML=sum.toString();
 })
 
 const inputCheckEl = document.getElementById("inputNumCheck");
@@ -44,7 +44,7 @@ const checkOutputEl = document.getElementById("checkOutput");
 
 
 checkBtnEl.addEventListener("click", ()=>{
-    let userNum = Number(inputCheckEl.value);
+    let userNum = parseInt(inputCheckEl.value);
     console.log(userNum);
     if (userNum < 100){
         checkOutputEl.innerHTML="Det var ett litet tal";
@@ -54,7 +54,15 @@ checkBtnEl.addEventListener("click", ()=>{
     }
 
 })
-
-
+function mouseEnter(){
+    checkBtnEl.style.backgroundColor="red";
+    checkBtnEl.style.border="none";
+}
+function mouseLeave(){
+    checkBtnEl.style.backgroundColor="orange";
+    checkBtnEl.style.border="none";
+}
+checkBtnEl.addEventListener("mouseenter", mouseEnter);
+checkBtnEl.addEventListener("mouseleave", mouseLeave);
 
 

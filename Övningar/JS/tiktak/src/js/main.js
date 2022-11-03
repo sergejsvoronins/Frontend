@@ -1,84 +1,90 @@
-class Player {
-    constructor(){
-        
-    }
-}
-
-let firstPlayer = [];
-let secondPlayer = [];
-
-for(let i=0; i<9; i++){
-    firstPlayer.push(false);
-    secondPlayer.push(false);
-}
-
-
-let counter = 0;
-
-
-console.log(firstPlayer);
-console.log(secondPlayer);
 
 
 
 let divList = [];
+let counter = 0;
 
 let mainContainer = document.getElementById("container");
-
-
-console.log(divList);
-
-
-for(let i=0; i<9; i++){
-    let square = document.createElement("div");
-    mainContainer.appendChild(square);
-    square.className = "box";  
-    divList.push(square); 
-    divList[i].addEventListener("click", () => {
-        handleClick((i));
-        });
-}
-
 //Alla vinkombinationer
-
 let winCombinations = [
     [true, true, true, false, false, false, false, false, false],
-    [false, false, true, true, true, true, false, false, false],
+    [false, false, false, true, true, true, false, false, false],
     [false, false, true, false, false, false, true, true, true],
     [true, false, false, true, false, false, true, false, false],
-    [false, true, true, false, true, false, false, true, false],
+    [false, true, false, false, true, false, false, true, false],
     [false, false, true, false, false, true, false, false, true],
-    [true, false, true, false, true, false, false, false, true],
+    [true, false, false, false, true, false, false, false, true],
     [false, false, true, false, true, false, true, false, false],
 ]
+// console.log(firstPlayer);
+// console.log(secondPlayer);
+// console.log(divList);
 
-function handleClick(index) {
-    // console.log("Du klickade på nr" ,(index+1));
-    
-    
-        if(counter%2===0){
-            firstPlayer[index]=true;
-            divList[index].style.backgroundColor = "red";
-
-                for(let a=0; a<winCombinations.length; a++){
-                    if(JSON.stringify(firstPlayer)===JSON.stringify(winCombinations[a])){
-                        console.log("Player1 van");
-                    }
-                }
-
-            counter++;
-        }
-        else {
-            secondPlayer[index] = true;
-            divList[index].style.backgroundColor = "green";
-
-                for(let a=0; a<winCombinations.length; a++){
-                    if(JSON.stringify(secondPlayer)===JSON.stringify(winCombinations[a])){
-                        console.log("Player2 van");
-                    }
-                }
-
-            counter++;
-        }
-        console.log(counter);
+let firstPlayer = [];
+let secondPlayer = [];
+for(let i=0; i<9; i++){
+    firstPlayer.push(false);
+    secondPlayer.push(false);
 }
+function checkResult (player, name){
+    for(let a = 0; a<winCombinations.length; a++){
+        if(JSON.stringify(player)===JSON.stringify(winCombinations[a])){
+            alert(name + " van");  
+            
+            
+        }
+        
+    }
+
+}
+
+
+    
+
+    
+    for(let i=0; i<9; i++){
+        let square = document.createElement("div");
+        mainContainer.appendChild(square);
+        square.className = "box";  
+        divList.push(square); 
+        divList[i].addEventListener("click", () => {
+            handleClick((i));
+            });
+    }
+    
+    
+    
+    function handleClick(index) {
+            if(counter%2===0){
+                divList[index].innerHTML = "X";
+                // divList[index].classList.add("Xbox");
+                firstPlayer[index]=true;
+                checkResult(firstPlayer, "Grattis! Första spelare");
+                if (counter===8){
+
+                    alert("Oavgjort");
+                }
+    
+                counter++;
+            }
+            else {
+                divList[index].innerHTML = "O";
+                // divList[index].classList.add("Obox");
+                secondPlayer[index] = true;
+                checkResult(secondPlayer, "Grattis! Andra spelare");
+                if (counter===8){
+
+                    alert("Oavgjort");
+                }
+    
+                counter++;
+            }
+    }
+
+
+
+// if(confirm("Vill du spela TikTak?")){
+//     startTikTak();
+
+// };
+

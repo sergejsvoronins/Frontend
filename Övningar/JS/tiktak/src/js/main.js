@@ -56,8 +56,8 @@ function checkResult (player, name){
     
     function handleClick(index) {
             if(counter%2===0){
-                divList[index].innerHTML = "X";
-                // divList[index].classList.add("Xbox");
+                divList[index].innerHTML = "<span>x</span>";
+                divList[index].classList.add("Xbox");
                 firstPlayer[index]=true;
                 checkResult(firstPlayer, "Grattis! Första spelare");
                 if (counter===8){
@@ -68,8 +68,8 @@ function checkResult (player, name){
                 counter++;
             }
             else {
-                divList[index].innerHTML = "O";
-                // divList[index].classList.add("Obox");
+                divList[index].innerHTML = "<span>o</span>";
+                divList[index].classList.add("Obox");
                 secondPlayer[index] = true;
                 checkResult(secondPlayer, "Grattis! Andra spelare");
                 if (counter===8){

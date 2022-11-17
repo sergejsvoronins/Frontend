@@ -1,0 +1,22 @@
+body{
+
+
+
+    #moviesContainer {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        div {
+            display: flex;
+            width: 30%;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                width: 100%;
+            }
+        }
+    }
+        
+
+}
